@@ -1,0 +1,31 @@
+//The prime factors of 13195 are 5, 7, 13 and 29.
+//What is the largest prime factor of the number 600851475143 ?
+
+#include <iostream>
+
+using namespace std;
+
+int LargestPrimeFactor(long long int Number);
+
+int main()
+{
+    LargestPrimeFactor(600851475143);
+}
+
+int LargestPrimeFactor(long long int Number)
+{
+    for(int i = 2; i < Number / i; i++)
+    {
+        while(Number % i == 0)
+        {
+            Number = Number / i;
+            cout << i << endl;
+        }
+        if(i > Number / i)
+        {
+            cout << Number << endl;
+        }
+    }
+
+    cout << "Highest prime factor = " << Number << endl;
+}
