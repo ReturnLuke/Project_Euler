@@ -1,0 +1,28 @@
+//2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+//What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+#include <iostream>
+
+using namespace std;
+
+void Smallest_Multiple();
+
+int main()
+{
+    Smallest_Multiple();
+}
+
+void Smallest_Multiple()
+{
+    for(long long int Multiple = 20, End = 0; End < 1; Multiple += 20)
+    {
+        if(Multiple % 3 == 0 && Multiple % 6 == 0 && Multiple % 7 == 0 && Multiple % 8 == 0 && Multiple % 9 == 0
+           && Multiple % 11 == 0 && Multiple % 12 == 0 && Multiple % 13 == 0 && Multiple % 14 == 0 && Multiple %
+           15 == 0 && Multiple % 16 == 0 && Multiple % 17 == 0 && Multiple % 18 == 0 && Multiple % 19 == 0)
+        {
+            cout << "The smallest positive number that is evenly divisible" << endl;
+            cout << "by all of the numbers from 1 to 20 is " << Multiple << "." << endl;
+            End = 1;
+        }
+    }
+}
