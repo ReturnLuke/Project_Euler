@@ -1,0 +1,50 @@
+//If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+//The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+#include <iostream>
+
+using namespace std;
+
+void MultipleSum();
+
+int main()
+{
+    int Number = 1000;
+
+    MultipleSum();
+
+    return 0;
+}
+
+void MultipleSum()
+{
+
+    int CommonMultiples = 0;
+
+    for(int Multiple = 3; Multiple <= 1000; Multiple += 3)
+    {
+        if(Multiple % 5 == 0)
+        {
+            CommonMultiples += Multiple;
+        }
+    }
+
+    int Total = 0;
+
+    for(int Three = 3; Three <= 1000; Three += 3)
+    {
+        Total += Three;
+
+    }
+
+    for(int Five = 5; Five < 1000; Five += 5)
+    {
+        Total += Five;
+    }
+
+    cout << "Total summation of multiples of 3 and 5 = " << Total << endl;
+    cout << "Common multiples of 3 and 5 = " << CommonMultiples << endl;
+    Total -= CommonMultiples;
+    cout << "Total summation - common multiples = " << Total << endl;
+
+}
