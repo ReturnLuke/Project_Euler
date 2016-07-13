@@ -6,8 +6,6 @@
 
 using namespace std;
 
-int HighestValue = 0;
-
 void Palindrome();
 
 int main()
@@ -17,6 +15,7 @@ int main()
 
 void Palindrome()
 {
+    int HighestValue = 0;
     for (int x = 999; x >= 350; x--)
     {
         for (int y = 999; y >= 350; y--)
