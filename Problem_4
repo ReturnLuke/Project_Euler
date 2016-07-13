@@ -17,9 +17,9 @@ int main()
 
 void Palindrome()
 {
-    for (int x = 999; x >= 100; x--)
+    for (int x = 999; x >= 350; x--)
     {
-        for (int y = 999; y >= 100; y--)
+        for (int y = 999; y >= 350; y--)
         {
             int Reversed = 0;
             int Multiplier = 100000;
