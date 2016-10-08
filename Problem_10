@@ -1,6 +1,43 @@
+//The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+//Find the sum of all the primes below two million.
+
 public class Main {
 	public static void main(String args[]){
 		Primes PrimesObject = new Primes();
 		PrimesObject.primeFinder();
+	}
+}
+
+public class Primes {
+	private boolean prime;
+	private boolean notPrime;
+	private double n;
+	private long total;
+	private double m;
+	private double division;
+	private long target;
+	public void primeFinder(){
+		target = 2000000;
+		for (n = 1, total = 0; n <= target + 1; n += 2){
+			prime = false;
+			notPrime = false;
+			for (m = 2; m <= Math.sqrt(n); m++){
+				division = n/m;
+				if (division % 1 == 0){
+					notPrime = true;
+				}
+				if (division % 1 != 0){
+					prime = true;
+				}
+			}
+			if (notPrime == false){
+				if (prime == true){
+					total += n;
+				}
+			}
+			if (n >= target){
+				System.out.println(total + 5);
+			}
+	    }
 	}
 }
