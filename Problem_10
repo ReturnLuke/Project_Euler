@@ -38,6 +38,6 @@ public class Primes {
 			if (n >= target){
 				System.out.println(total + 5);
 			}
-	    }
+		}
 	}
 }
