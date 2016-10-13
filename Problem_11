@@ -83,11 +83,11 @@ public class LargestProduct {
 	}
 	
 	int findLargestValue (int horizontal, int vertical, int diagonalLeft, int diagonalRight){
-		int myArray[] = {horizontal, vertical, diagonalLeft, diagonalRight};
+		int resultArray[] = {horizontal, vertical, diagonalLeft, diagonalRight};
 		int finalResult = 0;
-		for (int i = 0; i < myArray.length; i++){
-			if (finalResult < myArray[i]){
-				finalResult = myArray[i];
+		for (int i = 0; i < resultArray.length; i++){
+			if (finalResult < resultArray[i]){
+				finalResult = resultArray[i];
 			}
 		}
 		return finalResult;
